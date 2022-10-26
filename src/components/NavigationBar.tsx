@@ -7,6 +7,7 @@ const links = [
   { title: 'Landing', href: '/landing/landing-3' },
   { title: 'Solutions', href: '/landing/solutions' },
   { title: 'UI Snippets', href: '/ui-snippets' },
+    { title: 'home-copy', href: '/home-copy' },
 ];
 
 const NavigationBar: FunctionComponent = () => {
