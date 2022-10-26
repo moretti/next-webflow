@@ -7,9 +7,9 @@ export { getStaticProps };
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { path: ['company'] } },
-      { params: { path: ['order'] } },
-      { params: { path: ['faq'] } },
+      { params: { path: ['landing', 'landing-3'] } },
+      { params: { path: ['landing', 'solutions'] } },
+      { params: { path: ['ui-snippets'] } },
     ],
     fallback: `blocking`,
   };
