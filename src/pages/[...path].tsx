@@ -10,7 +10,7 @@ export async function getStaticPaths() {
       { params: { path: ['landing', 'landing-3'] } },
       { params: { path: ['landing', 'solutions'] } },
       { params: { path: ['ui-snippets'] } },
-            { params: { path: ['home-copy'] } },
+            { params: { path: ['landing-2'] } },
     ],
     fallback: `blocking`,
   };
