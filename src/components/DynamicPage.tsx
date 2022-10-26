@@ -13,6 +13,7 @@ type DynamicPageProps = {
   headContent: string;
   bodyContent: string;
 };
+import type { Element as CheerioElement } from 'cheerio';
 
 const parseOptions: HTMLReactParserOptions = { replace };
 
@@ -137,10 +138,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // Parse HTML with Cheerio
   const $ = cheerio.load(html);
 
+  // Hack to remove opacity: 0
+  $('*').each((i, element) => {
+    const el = element as CheerioElement;
+    const style = el.attribs['style'];
+    if (style) {
+      el.attribs['style'] = style.replaceAll(/opacity:0/gi, '');
+    }
+  });
+
   // Delete header and footer
   $('.navbar').remove();
-  $('.footer').remove();
-  $('.banner').remove();
+  $('.footer-3').remove();
 
   // Convert back to HTML strings
   const bodyContent = $('body').html();

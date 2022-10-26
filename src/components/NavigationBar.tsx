@@ -4,9 +4,8 @@ import { useRouter } from 'next/router';
 
 const links = [
   { title: 'Home', href: '/' },
-  { title: 'Order', href: '/order' },
-  { title: 'Company', href: '/company' },
-  { title: 'FAQ', href: '/faq' },
+  { title: 'Landing', href: '/landing/landing-3' },
+  { title: 'UI Snippets', href: '/ui-snippets' },
 ];
 
 const NavigationBar: FunctionComponent = () => {
