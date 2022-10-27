@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 
 const links = [
   { title: 'Home', href: '/' },
-  { title: 'Landing', href: '/landing/landing-2' },
-  { title: 'Solutions', href: '/landing/solutions' },
+  { title: 'Design survey', href: '/solutions/design-survey' },
+  { title: 'Figma prototypes', href: '/solutions/user-testing-for-figma-prototypes' },
   { title: 'UI Snippets', href: '/ui-snippets' },
-   { title: 'Home', href: '/landing-2' },
+   { title: 'landing', href: '/landing/landing-2' },
 ];
 
 const NavigationBar: FunctionComponent = () => {
